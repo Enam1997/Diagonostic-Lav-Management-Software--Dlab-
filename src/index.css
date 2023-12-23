@@ -1,1 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+:root {
+  /* Them colors */
+  --theme-color-1: #8addc1;
+  --theme-color-2: #000077;
+  --theme-color-3: #dbf5e7;
+  --theme-color-4: #e8eff6;
+  --theme-color-5: #f2f6fa;
+  --theme-color-6: #c4cefe;
+
+  /* Text colors */
+  --text-color-1: #2d405a;
+  --text-color-2: #56606d;
+  --text-color-3: #79828d;
+
+  /* Status colors */
+  --status-color-1: #ffb13c;
+  --status-color-2: #ff5050;
+  --status-color-3: #54cc8b;
+}
+
+.icon1 {
+  width: 24px;
+  height: 24px;
+}

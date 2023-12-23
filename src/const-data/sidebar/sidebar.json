@@ -1,0 +1,645 @@
+[
+  {
+    "title": "Dashboard",
+    "icon": "bi-gear-fill",
+    "path": "/"
+  },
+  {
+    "title": "Frontend",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Patient Details",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Create Patient",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Patient List",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Category",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Login Deactive",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Inventory",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Schedule",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Appoinment",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Employee",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Human Resource",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Pathology",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Refer Manager",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Office Accounting",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Pathology Billing",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Investigation Report",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Setings",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "Setting",
+        "icon": "bi-house-fill",
+        "path": "/"
+      },
+      {
+        "title": "Menu",
+        "icon": "bi-info-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Page Section",
+        "icon": "bi-phone-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Manage Page",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Slider",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Features",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Testimonial",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Service",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      },
+      {
+        "title": "Faq",
+        "icon": "bi-question-circle-fill",
+        "path": "/about"
+      }
+    ]
+  }
+]

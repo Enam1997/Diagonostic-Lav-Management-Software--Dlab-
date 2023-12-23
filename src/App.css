@@ -1,2 +1,14 @@
+main {
+  display: flex;
+  height: 100vh;
+}
 
-
+.right-container {
+  flex-grow: 1;
+  padding: 2em;
+  color: black;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
