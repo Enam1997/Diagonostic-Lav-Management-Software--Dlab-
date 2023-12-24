@@ -1,0 +1,9 @@
+.scrolabel-container {
+  height: 95%;
+  overflow: auto;
+  width: 100%;
+}
+
+.scrolabel-container .page-main-content {
+  padding: 0 2em;
+}

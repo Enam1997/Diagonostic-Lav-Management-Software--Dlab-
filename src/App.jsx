@@ -1,19 +1,34 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import ScrolabelContainer from "./layout/scrollabel-container/ScrolabelContainer";
 import Sidebar from "./layout/sidebar/Sidebar";
+import Topbar from "./layout/topbar/Topbar";
+import Dashboard from "./pages/dashboard/Dashboard";
+import CreatePatient from "./pages/patient-details/create-patient/CreatePatient";
+import PatientList from "./pages/patient-details/patient-list/PatientList";
+import Category from "./pages/patient-details/category/Category";
+import LoginDeactive from "./pages/patient-details/login-deactive/LoginDeactive";
 
 function App() {
   return (
     <main className="main">
       <Sidebar />
       <div className="right-container">
-        <h1 className="title">Right sight content</h1>
-        <p className="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, vitae
-          voluptates, totam et maxime quae amet praesentium, porro esse harum
-          ducimus libero dignissimos magni aliquam iusto obcaecati.
-          Exercitationem, ad aspernatur.
-        </p>
-        <button className="btn">Explore</button>
+        <Topbar />
+        <div className="main-container">
+          <BrowserRouter basename="/">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/patient/create" element={<CreatePatient />} />
+              <Route path="/patient/view" element={<PatientList />} />
+              <Route path="/patient/category" element={<Category />} />
+              <Route
+                path="/patient/disable_authentication"
+                element={<LoginDeactive />}
+              />
+            </Routes>
+          </BrowserRouter>
+        </div>
       </div>
     </main>
   );

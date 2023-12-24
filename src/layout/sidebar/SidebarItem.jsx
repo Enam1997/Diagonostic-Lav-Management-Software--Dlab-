@@ -30,7 +30,7 @@ const SidebarItem = ({ item }) => {
     return (
       <a href={item.path || "#"} className={`sidebar-item plain`}>
         {" "}
-        {item.icon && <span className="item-icon">{item.icon}</span>}
+        {item?.icon && <span className="item-icon">{item.icon}</span>}
         {item.title}
       </a>
     );

@@ -5,10 +5,21 @@ main {
 
 .right-container {
   flex-grow: 1;
-  padding: 2em;
-  color: black;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
+}
+
+.main-container {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.pagename-container {
+  height: 5%;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,21 @@
+.top-stats {
+  width: 100%;
+}
+
+.top-stats .stats-item h4 {
+  color: var(--text-color-3);
+}
+.top-stats .stats-item h2 {
+  color: var(--status-color-2);
+}
+.top-stats .stats-item h5 {
+  color: var(--text-color-2);
+}
+
+.second-section .card1 {
+  height: 550px;
+}
+
+.second-section .card1 h3 {
+  color: var(--text-color-3);
+}

@@ -27,47 +27,38 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
@@ -78,22 +69,18 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Create Patient",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Patient List",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Category",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Login Deactive",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
@@ -104,47 +91,38 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
@@ -155,47 +133,38 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
@@ -206,200 +175,167 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
   },
+  // Employee
   {
     title: "Employee",
     icon: <UserSearch />,
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
   },
+  // Human Resource
   {
     title: "Human Resource",
     icon: <Waypoints />,
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],
   },
+  // Pathology
   {
     title: "Pathology",
     icon: <Microscope />,
     childrens: [
       {
         title: "Setting",
-        icon: "bi-house-fill",
         path: "/",
       },
       {
         title: "Menu",
-        icon: "bi-info-circle-fill",
         path: "/about",
       },
       {
         title: "Page Section",
-        icon: "bi-phone-fill",
         path: "/about",
       },
       {
         title: "Manage Page",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Slider",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Features",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Testimonial",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Service",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
       {
         title: "Faq",
-        icon: "bi-question-circle-fill",
         path: "/about",
       },
     ],

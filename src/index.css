@@ -13,7 +13,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 16px;
-  color: #fff;
+  background-color: #f5f6fa;
 }
 
 :root {
@@ -34,9 +34,22 @@ body {
   --status-color-1: #ffb13c;
   --status-color-2: #ff5050;
   --status-color-3: #54cc8b;
+
+  /* Iocn color */
+  --icon-color1: #12ca9e;
 }
 
 .icon1 {
   width: 24px;
   height: 24px;
+}
+
+.section-top-margin {
+  margin-top: 30px;
+}
+
+.card1 {
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px;
 }
