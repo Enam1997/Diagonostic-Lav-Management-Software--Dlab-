@@ -16,18 +16,16 @@ function App() {
       <div className="right-container">
         <Topbar />
         <div className="main-container">
-          <BrowserRouter basename="/">
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/patient/create" element={<CreatePatient />} />
-              <Route path="/patient/view" element={<PatientList />} />
-              <Route path="/patient/category" element={<Category />} />
-              <Route
-                path="/patient/disable_authentication"
-                element={<LoginDeactive />}
-              />
-            </Routes>
-          </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/patient/create" element={<CreatePatient />} />
+            <Route path="/patient/view" element={<PatientList />} />
+            <Route path="/patient/category" element={<Category />} />
+            <Route
+              path="/patient/disable_authentication"
+              element={<LoginDeactive />}
+            />
+          </Routes>
         </div>
       </div>
     </main>

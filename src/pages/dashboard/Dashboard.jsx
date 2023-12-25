@@ -8,6 +8,7 @@ import {
   dashboardStats,
   anualIncomeExpenseChardData,
   appoinmentStatusThisMonthChartData,
+  patentFeesSummaryThisMonth,
 } from "../../const-data/dashboard/dashboardDumy";
 import {
   LineChart,
@@ -23,9 +24,15 @@ import {
 } from "recharts";
 
 const Dashboard = () => {
+  const style = {
+    top: "50%",
+    right: 0,
+    transform: "translate(0, -50%)",
+    lineHeight: "24px",
+  };
   return (
-    <div style={{ height: "100%" }}>
-      <PagenameContainer />
+    <div className="page-container">
+      <PagenameContainer>Dashboard</PagenameContainer>
       <ScrolabelContainer>
         <Box className="page-main-content">
           <Box className="top-stats">
@@ -103,10 +110,58 @@ const Dashboard = () => {
                         label
                       />
                     </PieChart>
+                    <Legend
+                      iconSize={10}
+                      layout="vertical"
+                      verticalAlign="middle"
+                      wrapperStyle={style}
+                    />
                   </ResponsiveContainer>
                 </Box>
               </Grid>
             </Grid>
+          </Box>
+          <Box className="third-section card1 section-top-margin">
+            <h3>Patient Fees Summary - December</h3>
+            <ResponsiveContainer
+              width="100%"
+              height="100%"
+              style={{ paddingTop: "10px" }}
+            >
+              <LineChart
+                width={500}
+                height={300}
+                data={patentFeesSummaryThisMonth}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 20,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line
+                  type="monotone"
+                  dataKey="netPayable"
+                  stroke="var(--status-color-1 )"
+                  activeDot={{ r: 8 }}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="totalPaid"
+                  stroke="var(--theme-color-2)"
+                />
+                <Line
+                  type="monotone"
+                  dataKey="totalDue"
+                  stroke="var(--status-color-2)"
+                />
+              </LineChart>
+            </ResponsiveContainer>
           </Box>
         </Box>
       </ScrolabelContainer>

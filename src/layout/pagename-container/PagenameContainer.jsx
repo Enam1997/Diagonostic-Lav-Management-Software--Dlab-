@@ -1,7 +1,7 @@
 import React from "react";
 
-const PagenameContainer = () => {
-  return <div className="pagename-container">Dashboard</div>;
+const PagenameContainer = ({children}) => {
+  return <div className="pagename-container">{children}</div>;
 };
 
 export default PagenameContainer;

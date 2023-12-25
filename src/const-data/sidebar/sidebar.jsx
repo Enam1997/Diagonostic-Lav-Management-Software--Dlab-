@@ -69,19 +69,19 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Create Patient",
-        path: "/",
+        path: "/patient/create",
       },
       {
         title: "Patient List",
-        path: "/about",
+        path: "/patient/view",
       },
       {
         title: "Category",
-        path: "/about",
+        path: "/patient/category",
       },
       {
         title: "Login Deactive",
-        path: "/about",
+        path: "/patient/disable_authentication",
       },
     ],
   },

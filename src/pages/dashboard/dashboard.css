@@ -19,3 +19,7 @@
 .second-section .card1 h3 {
   color: var(--text-color-3);
 }
+
+.third-section {
+  height: 600px;
+}

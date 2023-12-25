@@ -39,6 +39,12 @@ body {
   --icon-color1: #12ca9e;
 }
 
+/* Typography calsees */
+
+.page-container {
+  height: 100%;
+}
+
 .icon1 {
   width: 24px;
   height: 24px;
@@ -52,4 +58,10 @@ body {
   border-radius: 20px;
   background: #fff;
   padding: 20px;
+}
+
+.title1 {
+  font-size: 22px;
+  color: #12ca9e;
+  margin-bottom: 20px;
 }
