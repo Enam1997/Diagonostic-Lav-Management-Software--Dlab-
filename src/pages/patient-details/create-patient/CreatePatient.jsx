@@ -23,6 +23,7 @@ import {
   Weight,
 } from "lucide-react";
 import DragDropComponenet from "../../../component/dragdrop-compoent/DragDropComponenet";
+import LoadingButtonComponent from "../../../component/buttons/loading-button/LoadingButtonComponent";
 
 function basicDetails() {
   return (
@@ -381,7 +382,8 @@ const CreatePatient = () => {
       <PagenameContainer>Create Patient</PagenameContainer>
       <ScrolabelContainer>
         <Box className="page-main-content">
-          {basicDetails()} {emergencyContact()} {loginDetails()}
+          {basicDetails()} {emergencyContact()} {loginDetails()}{" "}
+          {<LoadingButtonComponent />}
         </Box>
       </ScrolabelContainer>
     </Box>
