@@ -8,15 +8,8 @@ import CreatePatient from "./pages/patient-details/create-patient/CreatePatient"
 import PatientList from "./pages/patient-details/patient-list/PatientList";
 import Category from "./pages/patient-details/category/Category";
 import LoginDeactive from "./pages/patient-details/login-deactive/LoginDeactive";
-import { ThemeProvider, createTheme } from "@mui/material";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#8addc1",
-    },
-  },
-});
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
 
 function App() {
   return (

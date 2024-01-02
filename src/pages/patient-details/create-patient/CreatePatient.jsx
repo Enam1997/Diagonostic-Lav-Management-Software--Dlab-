@@ -1,4 +1,11 @@
-import { Box, Grid, InputAdornment, MenuItem, TextField } from "@mui/material";
+import {
+  Box,
+  Grid,
+  InputAdornment,
+  MenuItem,
+  Stack,
+  TextField,
+} from "@mui/material";
 import React, { useState } from "react";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
 import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
@@ -377,13 +384,17 @@ function loginDetails() {
 }
 
 const CreatePatient = () => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <Box className="page-container">
       <PagenameContainer>Create Patient</PagenameContainer>
       <ScrolabelContainer>
         <Box className="page-main-content">
           {basicDetails()} {emergencyContact()} {loginDetails()}{" "}
-          {<LoadingButtonComponent />}
+          <Stack className="section-top-margin" alignItems="end">
+            {<LoadingButtonComponent loading={loading} />}
+          </Stack>
         </Box>
       </ScrolabelContainer>
     </Box>
