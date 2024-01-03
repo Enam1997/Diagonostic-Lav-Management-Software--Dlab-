@@ -2,16 +2,16 @@ import React from "react";
 import LoadingButton from "@mui/lab/LoadingButton";
 import { Save } from "lucide-react";
 
-const LoadingButtonComponent = ({ loading }) => {
+const LoadingButtonComponent = ({ loading, text, icon }) => {
   return (
     <LoadingButton
       // onClick={handleClick}
       loading={loading}
       loadingPosition="start"
-      startIcon={<Save />}
+      startIcon={icon}
       variant="contained"
     >
-      <span>Save</span>
+      <span>{text}</span>
     </LoadingButton>
   );
 };

@@ -303,40 +303,12 @@ export const sidebarMenus = [
     icon: <Microscope />,
     childrens: [
       {
-        title: "Setting",
-        path: "/",
+        title: "Lab Test",
+        path: "/pathology/labtest",
       },
       {
-        title: "Menu",
-        path: "/about",
-      },
-      {
-        title: "Page Section",
-        path: "/about",
-      },
-      {
-        title: "Manage Page",
-        path: "/about",
-      },
-      {
-        title: "Slider",
-        path: "/about",
-      },
-      {
-        title: "Features",
-        path: "/about",
-      },
-      {
-        title: "Testimonial",
-        path: "/about",
-      },
-      {
-        title: "Service",
-        path: "/about",
-      },
-      {
-        title: "Faq",
-        path: "/about",
+        title: "Category",
+        path: "/pathology/category",
       },
     ],
   },

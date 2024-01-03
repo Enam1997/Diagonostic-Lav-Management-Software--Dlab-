@@ -21,6 +21,7 @@ import {
   Phone,
   RefreshCcwDot,
   Ruler,
+  Save,
   Send,
   ShieldAlert,
   SquareUser,
@@ -393,7 +394,13 @@ const CreatePatient = () => {
         <Box className="page-main-content">
           {basicDetails()} {emergencyContact()} {loginDetails()}{" "}
           <Stack className="section-top-margin" alignItems="end">
-            {<LoadingButtonComponent loading={loading} />}
+            {
+              <LoadingButtonComponent
+                loading={loading}
+                text={"Save"}
+                icon={<Save />}
+              />
+            }
           </Stack>
         </Box>
       </ScrolabelContainer>

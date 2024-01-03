@@ -19,10 +19,11 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 
 import { visuallyHidden } from "@mui/utils";
-import { Filter, Trash } from "lucide-react";
+import { Filter, ShieldCheck, Trash } from "lucide-react";
 import Tooltip1 from "../../../component/tooltip/Tooltip1";
 import { Avatar } from "@mui/material";
-import { rows } from "../../../const-data/patient/patientList";
+import { deatcivatePatientData } from "../../../const-data/patient/patientList";
+import LoadingButtonComponent from "../../../component/buttons/loading-button/LoadingButtonComponent";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -80,24 +81,7 @@ const headCells = [
     disablePadding: true,
     label: "Catergory",
   },
-  {
-    id: "gender",
-    numeric: false,
-    disablePadding: false,
-    label: "Gender",
-  },
-  {
-    id: "gurdian",
-    numeric: false,
-    disablePadding: false,
-    label: "Gurdian",
-  },
-  {
-    id: "bloodGroup",
-    numeric: false,
-    disablePadding: false,
-    label: "Blood Group",
-  },
+
   {
     id: "email",
     numeric: false,
@@ -208,14 +192,14 @@ function EnhancedTableToolbar(props) {
           id="tableTitle"
           component="div"
         >
-          Patient
+          Deactivate
         </Typography>
       )}
 
       {numSelected > 0 ? (
         <Tooltip1 title="Delete">
           <IconButton>
-            <Trash />
+            <LoadingButtonComponent text={"Activate"} icon={<ShieldCheck />} />
           </IconButton>
         </Tooltip1>
       ) : (
@@ -233,7 +217,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function PatiensTable() {
+export default function DeactivateAccountsTable() {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
@@ -249,7 +233,7 @@ export default function PatiensTable() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.id);
+      const newSelected = deatcivatePatientData.map((n) => n.id);
       setSelected(newSelected);
       return;
     }
@@ -292,11 +276,13 @@ export default function PatiensTable() {
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+    page > 0
+      ? Math.max(0, (1 + page) * rowsPerPage - deatcivatePatientData.length)
+      : 0;
 
   const visibleRows = React.useMemo(
     () =>
-      stableSort(rows, getComparator(order, orderBy)).slice(
+      stableSort(deatcivatePatientData, getComparator(order, orderBy)).slice(
         page * rowsPerPage,
         page * rowsPerPage + rowsPerPage
       ),
@@ -319,7 +305,7 @@ export default function PatiensTable() {
               orderBy={orderBy}
               onSelectAllClick={handleSelectAllClick}
               onRequestSort={handleRequestSort}
-              rowCount={rows.length}
+              rowCount={deatcivatePatientData.length}
             />
             <TableBody>
               {visibleRows.map((row, index) => {
@@ -360,9 +346,7 @@ export default function PatiensTable() {
                       <Avatar alt="Remy Sharp" src={row.image} />
                     </TableCell>
                     <TableCell align="center">{row.category}</TableCell>
-                    <TableCell align="center">{row.gender}</TableCell>
-                    <TableCell align="center">{row.gurdian}</TableCell>
-                    <TableCell align="center">{row.bloodGroup}</TableCell>
+
                     <TableCell align="center">{row.email}</TableCell>
                     <TableCell align="center">{row.mobileNo}</TableCell>
                   </TableRow>
@@ -383,7 +367,7 @@ export default function PatiensTable() {
         <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
-          count={rows.length}
+          count={deatcivatePatientData.length}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}

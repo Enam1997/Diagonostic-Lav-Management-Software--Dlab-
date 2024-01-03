@@ -22,6 +22,24 @@ function createData(
   };
 }
 
+function createDeactivatePatientData(
+  id,
+  name,
+  image,
+  category,
+  email,
+  mobileNo
+) {
+  return {
+    id,
+    name,
+    image,
+    category,
+    email,
+    mobileNo,
+  };
+}
+
 // const rows = [
 //   createData(
 //     1,
@@ -58,6 +76,26 @@ const getPatientData = () => {
   return patientsList;
 };
 
-const rows = getPatientData();
+const getDeatcivatePatientData = () => {
+  const deactivateList = [];
 
-export { rows };
+  for (let i = 1; i <= 4; i++) {
+    const data = createDeactivatePatientData(
+      i,
+      `Patient ${i}`,
+      "https://www.planetsport.com/image-library/land/700/d/david-beckham-england-profile.webp",
+      `disease ${i}`,
+      `patient${i}@example.com`,
+      `0${Math.floor(Math.random() * 9000000000) + 1000000000}`
+    );
+
+    deactivateList.push(data);
+  }
+
+  return deactivateList;
+};
+
+const rows = getPatientData();
+const deatcivatePatientData = getDeatcivatePatientData();
+
+export { rows, deatcivatePatientData };
