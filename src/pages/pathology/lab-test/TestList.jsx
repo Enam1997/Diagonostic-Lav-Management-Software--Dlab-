@@ -186,38 +186,22 @@ function EnhancedTableToolbar(props) {
         }),
       }}
     >
-      {numSelected > 0 ? (
-        <Typography
-          sx={{ flex: "1 1 100%" }}
-          color="inherit"
-          variant="subtitle1"
-          component="div"
-        >
-          {numSelected} selected
-        </Typography>
-      ) : (
-        <Typography
-          sx={{ flex: "1 1 100%" }}
-          variant="h6"
-          id="tableTitle"
-          component="div"
-        >
-          Tests
-        </Typography>
-      )}
-
-      {numSelected > 0 ? (
-        <Tooltip1 title="Delete">
-          <IconButton>
-            <Trash />
-          </IconButton>
-        </Tooltip1>
-      ) : (
-        <Tooltip1 title="Filter list">
-          <IconButton>
-            <Filter />
-          </IconButton>
-        </Tooltip1>
+      {numSelected > 0 && (
+        <>
+          <Typography
+            sx={{ flex: "1 1 100%" }}
+            color="inherit"
+            variant="subtitle1"
+            component="div"
+          >
+            {numSelected} selected
+          </Typography>
+          <Tooltip1 title="Delete">
+            <IconButton>
+              <Trash />
+            </IconButton>
+          </Tooltip1>
+        </>
       )}
     </Toolbar>
   );

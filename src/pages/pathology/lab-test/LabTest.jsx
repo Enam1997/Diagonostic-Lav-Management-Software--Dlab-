@@ -1,10 +1,40 @@
-import { Box, Tab } from "@mui/material";
+import { Box, ButtonGroup, IconButton, OutlinedInput, Stack, Tab } from "@mui/material";
 import React from "react";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
 import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import TestList from "./TestList";
 import CreateTest from "./CreateTest";
+import Tooltip1 from "../../../component/tooltip/Tooltip1";
+import { FileText, Printer, Sheet } from "lucide-react";
+
+const buttons = [
+  <Tooltip1 key={1} title={"Hello"}>
+    <IconButton>
+      <Sheet />
+    </IconButton>
+  </Tooltip1>,
+  <Tooltip1 title={"Hello"} key={2}>
+    <IconButton>
+      <FileText />
+    </IconButton>
+  </Tooltip1>,
+  <Tooltip1 title={"Hello"} key={3}>
+    <IconButton>
+      <FileText />
+    </IconButton>
+  </Tooltip1>,
+  <Tooltip1 title={"Hello"} key={4}>
+    <IconButton>
+      <FileText />
+    </IconButton>
+  </Tooltip1>,
+  <Tooltip1 title={"Hello"} key={5}>
+    <IconButton>
+      <Printer />
+    </IconButton>
+  </Tooltip1>,
+];
 
 const LabTest = () => {
   const [value, setValue] = React.useState("1");
@@ -38,6 +68,12 @@ const LabTest = () => {
                 </TabList>
               </Box>
               <TabPanel value="1">
+                <Stack direction="row" justifyContent="space-between">
+                  <ButtonGroup size="small" aria-label="small button group">
+                    {buttons}
+                  </ButtonGroup>
+                  <OutlinedInput size="small" placeholder="Search patient" />
+                </Stack>
                 <TestList />
               </TabPanel>
               <TabPanel value="2">
