@@ -19,10 +19,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 
 import { visuallyHidden } from "@mui/utils";
-import { Filter, Trash } from "lucide-react";
+import { Edit, Filter, Trash } from "lucide-react";
 import Tooltip1 from "../../../component/tooltip/Tooltip1";
 import { Avatar } from "@mui/material";
-import { rows } from "../../../const-data/patient/patientList";
+import { rows } from "../../../const-data/pathology/testLiat";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -57,58 +57,52 @@ const headCells = [
     id: "name",
     numeric: false,
     disablePadding: true,
-    label: "Name",
+    label: "Test Category",
   },
 
   {
     id: "patientId",
     numeric: false,
     disablePadding: true,
-    label: "PatientId",
+    label: "TestName",
   },
 
   {
     id: "image",
     numeric: false,
     disablePadding: true,
-    label: "Image",
+    label: "Test Code",
   },
 
   {
     id: "catergory",
     numeric: false,
     disablePadding: true,
-    label: "Catergory",
+    label: "Patient Price",
   },
   {
     id: "gender",
     numeric: false,
     disablePadding: false,
-    label: "Gender",
+    label: "Production Cost",
   },
   {
     id: "gurdian",
     numeric: false,
     disablePadding: false,
-    label: "Gurdian",
+    label: "Created By",
   },
   {
     id: "bloodGroup",
     numeric: false,
     disablePadding: false,
-    label: "Blood Group",
+    label: "Date",
   },
   {
     id: "email",
     numeric: false,
     disablePadding: false,
-    label: "Email",
-  },
-  {
-    id: "mobile",
-    numeric: false,
-    disablePadding: false,
-    label: "Mobile No",
+    label: "Action",
   },
 ];
 
@@ -208,7 +202,7 @@ function EnhancedTableToolbar(props) {
           id="tableTitle"
           component="div"
         >
-          Patient
+          Tests
         </Typography>
       )}
 
@@ -233,7 +227,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function PatiensTable() {
+export default function TestList() {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
@@ -312,6 +306,7 @@ export default function PatiensTable() {
             sx={{ minWidth: 750 }}
             aria-labelledby="tableTitle"
             size={dense ? "small" : "medium"}
+            stickyHeader
           >
             <EnhancedTableHead
               numSelected={selected.length}
@@ -349,22 +344,22 @@ export default function PatiensTable() {
                       component="th"
                       id={labelId}
                       scope="row"
-                      padding="none"
                       align="inherit"
                     >
-                      {row.name}
+                      {row.category}
                     </TableCell>
-                    <TableCell align="center">{row.id}</TableCell>
 
+                    <TableCell align="center">{row.name}</TableCell>
+                    <TableCell align="center">{row.testCode}</TableCell>
+                    <TableCell align="center">{row.patientPrice}</TableCell>
+                    <TableCell align="center">{row.productionCost}</TableCell>
+                    <TableCell align="center">{row.createdBy}</TableCell>
+                    <TableCell align="center">{row.date}</TableCell>
                     <TableCell align="center">
-                      <Avatar alt="Remy Sharp" src={row.image} />
+                      <IconButton>
+                        <Edit />
+                      </IconButton>
                     </TableCell>
-                    <TableCell align="center">{row.category}</TableCell>
-                    <TableCell align="center">{row.gender}</TableCell>
-                    <TableCell align="center">{row.gurdian}</TableCell>
-                    <TableCell align="center">{row.bloodGroup}</TableCell>
-                    <TableCell align="center">{row.email}</TableCell>
-                    <TableCell align="center">{row.mobileNo}</TableCell>
                   </TableRow>
                 );
               })}

@@ -10,6 +10,8 @@ import Category from "./pages/patient-details/category/Category";
 import LoginDeactive from "./pages/patient-details/login-deactive/LoginDeactive";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
+import LabTest from "./pages/pathology/lab-test/LabTest";
+import TestCategory from "./pages/pathology/category/TestCategory";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <div className="main-container">
             <Routes>
               <Route path="/" element={<Dashboard />} />
+
+              {/* Patient routes */}
               <Route path="/patient/create" element={<CreatePatient />} />
               <Route path="/patient/view" element={<PatientList />} />
               <Route path="/patient/category" element={<Category />} />
@@ -28,6 +32,9 @@ function App() {
                 path="/patient/disable_authentication"
                 element={<LoginDeactive />}
               />
+              {/* Pathology Routes */}
+              <Route path="/pathology/labtest" element={<LabTest />} />
+              <Route path="/pathology/category" element={<TestCategory />} />
             </Routes>
           </div>
         </div>
