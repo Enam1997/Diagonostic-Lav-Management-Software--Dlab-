@@ -12,6 +12,13 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 import LabTest from "./pages/pathology/lab-test/LabTest";
 import TestCategory from "./pages/pathology/category/TestCategory";
+import Chemical from "./pages/inventory/chemical/Chemical";
+import InventoryCategory from "./pages/inventory/inventory-category/InventoryCategory";
+import Supplier from "./pages/inventory/supplier/Supplier";
+import Unit from "./pages/inventory/unit/Unit";
+import Purchase from "./pages/inventory/purchase/Purchase";
+import Stock from "./pages/inventory/stock/Stock";
+import ReagentAssigned from "./pages/inventory/reagent-assigned/ReagentAssigned";
 
 function App() {
   return (
@@ -35,6 +42,21 @@ function App() {
               {/* Pathology Routes */}
               <Route path="/pathology/labtest" element={<LabTest />} />
               <Route path="/pathology/category" element={<TestCategory />} />
+
+              {/* Inventory Routes */}
+              <Route path="/inventory/chemical" element={<Chemical />} />
+              <Route
+                path="/inventory/category"
+                element={<InventoryCategory />}
+              />
+              <Route path="/inventory/supplier" element={<Supplier />} />
+              <Route path="/inventory/unit" element={<Unit />} />
+              <Route path="/inventory/purchase" element={<Purchase />} />
+              <Route path="/inventory/stock" element={<Stock />} />
+              <Route
+                path="/inventory/reagent_assigned"
+                element={<ReagentAssigned />}
+              />
             </Routes>
           </div>
         </div>
