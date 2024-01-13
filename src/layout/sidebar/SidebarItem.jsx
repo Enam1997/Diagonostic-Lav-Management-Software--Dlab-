@@ -9,7 +9,7 @@ const SidebarItem = ({ item }) => {
     return (
       <div
         className={`sidebar-item ${itemOpen ? "open" : ""} `}
-        onClick={() => setItemOpen(!itemOpen)}
+        
       >
         <div className="sidebar-title">
           <span>
@@ -17,7 +17,7 @@ const SidebarItem = ({ item }) => {
             {item.icon && <span className="item-icon">{item.icon}</span>}
             {item.title}
           </span>
-          <ArrowDown className="toggle-btn" size={"14px"} />
+          <ArrowDown className="toggle-btn" size={"14px"} onClick={() => setItemOpen(!itemOpen)}/>
           {/* <Plus className="toggle-btn" /> */}
         </div>
         <div className="sidebar-content">

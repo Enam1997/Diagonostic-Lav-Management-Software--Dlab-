@@ -90,40 +90,42 @@ export const sidebarMenus = [
     icon: <PackageSearch />,
     childrens: [
       {
-        title: "Setting",
-        path: "/",
+        title: "Chemical",
+        path: "/inventory/chemical",
       },
       {
-        title: "Menu",
-        path: "/about",
+        title: "Category",
+        path: "/inventory/category",
       },
       {
-        title: "Page Section",
-        path: "/about",
+        title: "Supplier",
+        path: "/inventory/supplier",
       },
       {
-        title: "Manage Page",
-        path: "/about",
+        title: "Unit",
+        path: "/inventory/unit",
       },
       {
-        title: "Slider",
-        path: "/about",
+        title: "Purchase",
+        path: "/inventory/purchase",
       },
       {
-        title: "Features",
-        path: "/about",
+        title: "Stock",
+        path: "/inventory/stock",
       },
       {
-        title: "Testimonial",
-        path: "/about",
+        title: "Reagent Assigned",
+        path: "/inventory/reagent_assigned",
       },
       {
-        title: "Service",
-        path: "/about",
-      },
-      {
-        title: "Faq",
-        path: "/about",
+        title: "Reports",
+        icon: <PackageSearch />,
+        childrens: [
+          {
+            title: "Chemical",
+            path: "/inventory/chemical",
+          },
+        ],
       },
     ],
   },
