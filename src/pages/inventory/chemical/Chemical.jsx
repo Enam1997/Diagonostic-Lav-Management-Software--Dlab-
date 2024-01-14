@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
-import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import Tooltip1 from "../../../component/tooltip/Tooltip1";
 import { FileText, Printer, Sheet } from "lucide-react";
@@ -84,7 +83,6 @@ const Chemical = () => {
                 <ChemicalList />
               </TabPanel>
               <TabPanel value="2">
-                {/* <CreateTest /> */}
                 <CreateChemical />
               </TabPanel>
             </TabContext>
