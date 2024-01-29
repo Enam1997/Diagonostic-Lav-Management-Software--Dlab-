@@ -19,6 +19,7 @@ import Unit from "./pages/inventory/unit/Unit";
 import Purchase from "./pages/inventory/purchase/Purchase";
 import Stock from "./pages/inventory/stock/Stock";
 import ReagentAssigned from "./pages/inventory/reagent-assigned/ReagentAssigned";
+import Schedule from "./pages/schedule/Schedule";
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
                 path="/inventory/reagent_assigned"
                 element={<ReagentAssigned />}
               />
+
+              {/* Scheduled */}
+              <Route path="/schedule" element={<Schedule/>} />
             </Routes>
           </div>
         </div>

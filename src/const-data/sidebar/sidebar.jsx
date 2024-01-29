@@ -132,44 +132,7 @@ export const sidebarMenus = [
   {
     title: "Schedule",
     icon: <CalendarCheck />,
-    childrens: [
-      {
-        title: "Setting",
-        path: "/",
-      },
-      {
-        title: "Menu",
-        path: "/about",
-      },
-      {
-        title: "Page Section",
-        path: "/about",
-      },
-      {
-        title: "Manage Page",
-        path: "/about",
-      },
-      {
-        title: "Slider",
-        path: "/about",
-      },
-      {
-        title: "Features",
-        path: "/about",
-      },
-      {
-        title: "Testimonial",
-        path: "/about",
-      },
-      {
-        title: "Service",
-        path: "/about",
-      },
-      {
-        title: "Faq",
-        path: "/about",
-      },
-    ],
+    path: "/schedule",
   },
   {
     title: "Appoinment",
