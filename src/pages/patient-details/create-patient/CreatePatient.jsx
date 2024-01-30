@@ -390,7 +390,7 @@ const CreatePatient = () => {
   return (
     <Box className="page-container">
       <PagenameContainer>Create Patient</PagenameContainer>
-      <ScrolabelContainer>
+
         <Box className="page-main-content">
           {basicDetails()} {emergencyContact()} {loginDetails()}{" "}
           <Stack className="section-top-margin" alignItems="end">
@@ -403,7 +403,7 @@ const CreatePatient = () => {
             }
           </Stack>
         </Box>
-      </ScrolabelContainer>
+
     </Box>
   );
 };

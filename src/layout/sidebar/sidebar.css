@@ -93,6 +93,10 @@
   color: var(--theme-color-1);
 }
 
+.activenav{
+  color: red !important;
+}
+
 .sidebar-item.plain .item-icon {
   display: inline-block;
   width: 1.7em;

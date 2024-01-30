@@ -1,6 +1,6 @@
 import { ArrowDown, Plus, Settings } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const SidebarItem = ({ item }) => {
   const [itemOpen, setItemOpen] = useState(false);
@@ -34,10 +34,12 @@ const SidebarItem = ({ item }) => {
       //   {item?.icon && <span className="item-icon">{item.icon}</span>}
       //   {item.title}
       // </a>
-      <Link to={item.path || "#"} className={`sidebar-item plain`}>
+      <NavLink to={item.path || "#"}  className={({ isActive }) =>
+      isActive ? 'activenav sidebar-item plain' : 'sidebar-item plain'
+    }>
         {item?.icon && <span className="item-icon">{item.icon}</span>}
         {item.title}
-      </Link>
+      </NavLink>
     );
   }
 };

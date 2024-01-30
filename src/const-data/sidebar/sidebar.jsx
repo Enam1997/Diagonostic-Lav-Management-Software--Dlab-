@@ -139,40 +139,16 @@ export const sidebarMenus = [
     icon: <StickyNote />,
     childrens: [
       {
-        title: "Setting",
-        path: "/",
+        title: "Appointment List",
+        path: "/appointment",
       },
       {
-        title: "Menu",
-        path: "/about",
+        title: "Create Appointment",
+        path: "appointment/add_appoinment",
       },
       {
-        title: "Page Section",
-        path: "/about",
-      },
-      {
-        title: "Manage Page",
-        path: "/about",
-      },
-      {
-        title: "Slider",
-        path: "/about",
-      },
-      {
-        title: "Features",
-        path: "/about",
-      },
-      {
-        title: "Testimonial",
-        path: "/about",
-      },
-      {
-        title: "Service",
-        path: "/about",
-      },
-      {
-        title: "Faq",
-        path: "/about",
+        title: "Requested List",
+        path: "appointment/requested_list",
       },
     ],
   },

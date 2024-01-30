@@ -20,6 +20,9 @@ import Purchase from "./pages/inventory/purchase/Purchase";
 import Stock from "./pages/inventory/stock/Stock";
 import ReagentAssigned from "./pages/inventory/reagent-assigned/ReagentAssigned";
 import Schedule from "./pages/schedule/Schedule";
+import AppoinmentList from "./pages/appoinment/appoinment-list/AppoinmentList";
+import CreateAppoinment from "./pages/appoinment/create-appoinment/CreateAppoinment";
+import RequestedList from "./pages/appoinment/requested-list/RequestedList";
 
 function App() {
   return (
@@ -61,6 +64,10 @@ function App() {
 
               {/* Scheduled */}
               <Route path="/schedule" element={<Schedule/>} />
+               {/* Appoinment */}
+               <Route path="/appointment" element={<AppoinmentList/>} />
+               <Route path="/appointment/add_appoinment" element={<CreateAppoinment/>} />
+               <Route path="/appointment/requested_list" element={<RequestedList/>} />
             </Routes>
           </div>
         </div>

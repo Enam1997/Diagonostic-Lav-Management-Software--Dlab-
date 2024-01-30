@@ -43,6 +43,7 @@ body {
 
 .page-container {
   height: 100%;
+  overflow-y: scroll;
 }
 
 .page-main-content {
@@ -73,3 +74,4 @@ body {
   color: #12ca9e;
   margin-bottom: 20px;
 }
+
