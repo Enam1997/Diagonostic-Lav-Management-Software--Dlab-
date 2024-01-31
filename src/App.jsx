@@ -23,6 +23,7 @@ import Schedule from "./pages/schedule/Schedule";
 import AppoinmentList from "./pages/appoinment/appoinment-list/AppoinmentList";
 import CreateAppoinment from "./pages/appoinment/create-appoinment/CreateAppoinment";
 import RequestedList from "./pages/appoinment/requested-list/RequestedList";
+import EmployeeList from "./pages/employee/employee-list/EmployeeList";
 
 function App() {
   return (
@@ -68,6 +69,11 @@ function App() {
                <Route path="/appointment" element={<AppoinmentList/>} />
                <Route path="/appointment/add_appoinment" element={<CreateAppoinment/>} />
                <Route path="/appointment/requested_list" element={<RequestedList/>} />
+
+                {/* Employee */}
+                <Route path="/employee-list" element={<EmployeeList/>} />
+
+                
             </Routes>
           </div>
         </div>

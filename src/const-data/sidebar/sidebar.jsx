@@ -158,40 +158,24 @@ export const sidebarMenus = [
     icon: <UserSearch />,
     childrens: [
       {
-        title: "Setting",
-        path: "/",
+        title: "Employee List",
+        path: "/employee-list",
       },
       {
-        title: "Menu",
-        path: "/about",
+        title: "Add Department",
+        path: "/add-employee-department",
       },
       {
-        title: "Page Section",
-        path: "/about",
+        title: "Add Designation",
+        path: "/add-employee-designation",
       },
       {
-        title: "Manage Page",
-        path: "/about",
+        title: "Add Employee",
+        path: "/add-employee",
       },
       {
-        title: "Slider",
-        path: "/about",
-      },
-      {
-        title: "Features",
-        path: "/about",
-      },
-      {
-        title: "Testimonial",
-        path: "/about",
-      },
-      {
-        title: "Service",
-        path: "/about",
-      },
-      {
-        title: "Faq",
-        path: "/about",
+        title: "Login Deactive",
+        path: "/employee-login-deactivated-list",
       },
     ],
   },
@@ -202,11 +186,11 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Setting",
-        path: "/",
+        path: "/employee-list",
       },
       {
         title: "Menu",
-        path: "/about",
+        path: "/add-employee-department",
       },
       {
         title: "Page Section",
