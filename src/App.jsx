@@ -24,6 +24,8 @@ import AppoinmentList from "./pages/appoinment/appoinment-list/AppoinmentList";
 import CreateAppoinment from "./pages/appoinment/create-appoinment/CreateAppoinment";
 import RequestedList from "./pages/appoinment/requested-list/RequestedList";
 import EmployeeList from "./pages/employee/employee-list/EmployeeList";
+import Department from "./pages/employee/add-department/Department";
+import Designation from "./pages/employee/add-designation/Designation";
 
 function App() {
   return (
@@ -72,6 +74,8 @@ function App() {
 
                 {/* Employee */}
                 <Route path="/employee-list" element={<EmployeeList/>} />
+                <Route path="/add-employee-department" element={<Department/>} />
+                <Route path="/add-employee-designation" element={<Designation/>} />
 
                 
             </Routes>

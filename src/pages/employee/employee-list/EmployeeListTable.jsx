@@ -22,7 +22,7 @@ import { FileText, Printer, Sheet } from "lucide-react";
 import { visuallyHidden } from "@mui/utils";
 import { Edit, Filter, Trash } from "lucide-react";
 import Tooltip1 from "../../../component/tooltip/Tooltip1";
-import { ButtonGroup,  OutlinedInput, Stack } from "@mui/material";
+import { Avatar, ButtonGroup, OutlinedInput, Stack } from "@mui/material";
 
 const buttons = [
   <Tooltip1 key={1} title={"Hello"}>
@@ -82,6 +82,19 @@ function stableSort(array, comparator) {
 
 const headCells = [
   {
+    id: "sl",
+    numeric: false,
+    disablePadding: true,
+    label: "SL",
+  },
+  {
+    id: "photo",
+    numeric: false,
+    disablePadding: true,
+    label: "Photo",
+  },
+
+  {
     id: "name",
     numeric: false,
     disablePadding: true,
@@ -89,60 +102,35 @@ const headCells = [
   },
 
   {
-    id: "patientId",
+    id: "staffId",
     numeric: false,
     disablePadding: true,
-    label: "Code",
+    label: "	Staff Id",
   },
 
   {
-    id: "image",
+    id: "designation",
     numeric: false,
     disablePadding: true,
-    label: "Category",
-  },
-
-  {
-    id: "catergory",
-    numeric: false,
-    disablePadding: true,
-    label: "Purchase Unit",
+    label: "Designation",
   },
   {
-    id: "gender",
+    id: "department",
     numeric: false,
     disablePadding: false,
-    label: "Sale Unit",
-  },
-  {
-    id: "gurdian",
-    numeric: false,
-    disablePadding: false,
-    label: "Unit Ratio",
-  },
-  {
-    id: "bloodGroup",
-    numeric: false,
-    disablePadding: false,
-    label: "Purchase Price",
-  },
-  {
-    id: "salesPrice",
-    numeric: false,
-    disablePadding: false,
-    label: "Sales Price",
-  },
-  {
-    id: "remarks",
-    numeric: false,
-    disablePadding: false,
-    label: "Remarks",
+    label: "Department",
   },
   {
     id: "email",
     numeric: false,
     disablePadding: false,
-    label: "Actions",
+    label: "Email",
+  },
+  {
+    id: "mobileNo",
+    numeric: false,
+    disablePadding: false,
+    label: "Mobile No",
   },
 ];
 
@@ -251,7 +239,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function EmployeeListTable({rows}) {
+export default function EmployeeListTable({ rows }) {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
@@ -377,16 +365,16 @@ export default function EmployeeListTable({rows}) {
                         scope="row"
                         align="inherit"
                       >
-                        {row.name}
+                        {index}
                       </TableCell>
-                      <TableCell align="center">{row.code}</TableCell>
-                      <TableCell align="center">{row.category}</TableCell>
-                      <TableCell align="center">{row.purchaseUnit}</TableCell>
-                      <TableCell align="center">{row.saleUnit}</TableCell>
-                      <TableCell align="center">{row.unitRatio}</TableCell>
-                      <TableCell align="center">{row.purchasePrice}</TableCell>
-                      <TableCell align="center">{row.salesPrice}</TableCell>
-                      <TableCell align="center">{row.remarks}</TableCell>
+                      <TableCell align="center"><Avatar alt="Remy Sharp" src={row.image} /></TableCell>
+                      <TableCell align="center">{row.name}</TableCell>
+                      <TableCell align="center">{row.id}</TableCell>
+                    
+                      <TableCell align="center">{row.designation}</TableCell>
+                      <TableCell align="center">{row.department}</TableCell>
+                      <TableCell align="center">{row.email}</TableCell>
+                      <TableCell align="center">{row.mobileNo}</TableCell>
                       <TableCell align="center">
                         <IconButton>
                           <Edit />

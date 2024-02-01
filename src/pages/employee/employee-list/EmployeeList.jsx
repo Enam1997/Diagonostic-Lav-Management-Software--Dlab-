@@ -12,7 +12,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import Tooltip1 from "../../../component/tooltip/Tooltip1";
 
 import EmployeeListTable from "./EmployeeListTable";
-import { rows } from "../../../const-data/inventory/checmicalList";
+import { rows } from "../../../const-data/employee/employeeList";
 
 const EmployeeList = () => {
   const [value, setValue] = React.useState("1");
