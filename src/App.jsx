@@ -27,6 +27,7 @@ import EmployeeList from "./pages/employee/employee-list/EmployeeList";
 import Department from "./pages/employee/add-department/Department";
 import Designation from "./pages/employee/add-designation/Designation";
 import AddEmployee from "./pages/employee/add-employee/AddEmployee";
+import LoginDeactiveEmployee from "./pages/employee/login-deactive/LoginDeactiveEmployee";
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
                 <Route path="/employee-list" element={<EmployeeList/>} />
                 <Route path="/add-employee" element={<AddEmployee/>} />
                 <Route path="/add-employee-designation" element={<Designation/>} />
+                <Route path="/employee-login-deactivated-list" element={<LoginDeactiveEmployee/>} />
 
                 
             </Routes>
