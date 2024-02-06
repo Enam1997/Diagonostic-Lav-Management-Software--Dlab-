@@ -26,6 +26,7 @@ import RequestedList from "./pages/appoinment/requested-list/RequestedList";
 import EmployeeList from "./pages/employee/employee-list/EmployeeList";
 import Department from "./pages/employee/add-department/Department";
 import Designation from "./pages/employee/add-designation/Designation";
+import AddEmployee from "./pages/employee/add-employee/AddEmployee";
 
 function App() {
   return (
@@ -74,7 +75,7 @@ function App() {
 
                 {/* Employee */}
                 <Route path="/employee-list" element={<EmployeeList/>} />
-                <Route path="/add-employee-department" element={<Department/>} />
+                <Route path="/add-employee" element={<AddEmployee/>} />
                 <Route path="/add-employee-designation" element={<Designation/>} />
 
                 
