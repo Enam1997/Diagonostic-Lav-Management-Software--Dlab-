@@ -28,6 +28,7 @@ import Department from "./pages/employee/add-department/Department";
 import Designation from "./pages/employee/add-designation/Designation";
 import AddEmployee from "./pages/employee/add-employee/AddEmployee";
 import LoginDeactiveEmployee from "./pages/employee/login-deactive/LoginDeactiveEmployee";
+import SetReferral from "./pages/refer-manager/set-referral/SetReferral";
 
 function App() {
   return (
@@ -39,7 +40,6 @@ function App() {
           <div className="main-container">
             <Routes>
               <Route path="/" element={<Dashboard />} />
-
               {/* Patient routes */}
               <Route path="/patient/create" element={<CreatePatient />} />
               <Route path="/patient/view" element={<PatientList />} />
@@ -51,7 +51,6 @@ function App() {
               {/* Pathology Routes */}
               <Route path="/pathology/labtest" element={<LabTest />} />
               <Route path="/pathology/category" element={<TestCategory />} />
-
               {/* Inventory Routes */}
               <Route path="/inventory/chemical" element={<Chemical />} />
               <Route
@@ -66,21 +65,31 @@ function App() {
                 path="/inventory/reagent_assigned"
                 element={<ReagentAssigned />}
               />
-
               {/* Scheduled */}
-              <Route path="/schedule" element={<Schedule/>} />
-               {/* Appoinment */}
-               <Route path="/appointment" element={<AppoinmentList/>} />
-               <Route path="/appointment/add_appoinment" element={<CreateAppoinment/>} />
-               <Route path="/appointment/requested_list" element={<RequestedList/>} />
-
-                {/* Employee */}
-                <Route path="/employee-list" element={<EmployeeList/>} />
-                <Route path="/add-employee" element={<AddEmployee/>} />
-                <Route path="/add-employee-designation" element={<Designation/>} />
-                <Route path="/employee-login-deactivated-list" element={<LoginDeactiveEmployee/>} />
-
-                
+              <Route path="/schedule" element={<Schedule />} />
+              {/* Appoinment */}
+              <Route path="/appointment" element={<AppoinmentList />} />
+              <Route
+                path="/appointment/add_appoinment"
+                element={<CreateAppoinment />}
+              />
+              <Route
+                path="/appointment/requested_list"
+                element={<RequestedList />}
+              />
+              {/* Employee */}
+              <Route path="/employee-list" element={<EmployeeList />} />
+              <Route path="/add-employee" element={<AddEmployee />} />
+              <Route
+                path="/add-employee-designation"
+                element={<Designation />}
+              />
+              <Route
+                path="/employee-login-deactivated-list"
+                element={<LoginDeactiveEmployee />}
+              />
+              {/* Refer Manager */}
+              <Route path="/refer/set-referal" element={<SetReferral />} />
             </Routes>
           </div>
         </div>

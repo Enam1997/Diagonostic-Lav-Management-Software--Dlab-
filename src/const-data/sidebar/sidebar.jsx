@@ -242,52 +242,42 @@ export const sidebarMenus = [
     icon: <BookMarked />,
     childrens: [
       {
-        title: "Setting",
-        icon: "bi-house-fill",
-        path: "/",
+        title: "Set Referral",
+        path: "/refer/set-referal",
       },
       {
-        title: "Menu",
-        icon: "bi-info-circle-fill",
-        path: "/about",
+        title: "Refarral List",
+        path: "/refer/referral-list",
       },
       {
-        title: "Page Section",
-        icon: "bi-phone-fill",
-        path: "/about",
+        title: "Withdrawal",
+        path: "/refer/withdrawal",
       },
       {
-        title: "Manage Page",
-        icon: "bi-question-circle-fill",
-        path: "/about",
-      },
-      {
-        title: "Slider",
-        icon: "bi-question-circle-fill",
-        path: "/about",
-      },
-      {
-        title: "Features",
-        icon: "bi-question-circle-fill",
-        path: "/about",
-      },
-      {
-        title: "Testimonial",
-        icon: "bi-question-circle-fill",
-        path: "/about",
-      },
-      {
-        title: "Service",
-        icon: "bi-question-circle-fill",
-        path: "/about",
-      },
-      {
-        title: "Faq",
-        icon: "bi-question-circle-fill",
-        path: "/about",
+        title: "Reports",
+        icon: <PackageSearch />,
+        childrens: [
+          {
+            title: "Refarral Statement",
+            path: "/inventory/chemical",
+          },
+          {
+            title: "Commision Report",
+            path: "/inventory/chemical",
+          },
+          {
+            title: "Commision Summary",
+            path: "/inventory/chemical",
+          },
+          {
+            title: "Payout Report",
+            path: "/inventory/chemical",
+          },
+        ],
       },
     ],
   },
+
   {
     title: "Office Accounting",
     icon: <Calculator />,
