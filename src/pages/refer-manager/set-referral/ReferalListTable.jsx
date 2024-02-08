@@ -326,15 +326,12 @@ export default function ReferalListTable() {
                     >
                       {index + 1}
                     </TableCell>
-                    <TableCell align="ceneter">{row.name}</TableCell>
-                    <TableCell align="center">{row.code}</TableCell>
-                    <TableCell align="center">{row.category}</TableCell>
-                    <TableCell align="center">{row.purchaseUnit}</TableCell>
-                    <TableCell align="center">{row.saleUnit}</TableCell>
-                    <TableCell align="center">{row.unitRatio}</TableCell>
-                    <TableCell align="center">{row.purchasePrice}</TableCell>
-                    <TableCell align="center">{row.salesPrice}</TableCell>
-                    <TableCell align="center">{row.remarks}</TableCell>
+                    <TableCell align="ceneter">{row.id}</TableCell>
+                    <TableCell align="center">{row.name}</TableCell>
+                    <TableCell align="center">{row.designation}</TableCell>
+                    <TableCell align="center">{row.department}</TableCell>
+                    <TableCell align="center">{row.percentege}</TableCell>
+
                     <TableCell align="center">
                       <IconButton>
                         <Edit />
