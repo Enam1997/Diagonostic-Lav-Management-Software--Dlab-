@@ -29,6 +29,8 @@ import Designation from "./pages/employee/add-designation/Designation";
 import AddEmployee from "./pages/employee/add-employee/AddEmployee";
 import LoginDeactiveEmployee from "./pages/employee/login-deactive/LoginDeactiveEmployee";
 import SetReferral from "./pages/refer-manager/set-referral/SetReferral";
+import Setting from "./pages/frontend/setting/Setting";
+import Menu from "./pages/frontend/menu/Menu";
 
 function App() {
   return (
@@ -40,6 +42,12 @@ function App() {
           <div className="main-container">
             <Routes>
               <Route path="/" element={<Dashboard />} />
+
+               {/* Frontend */}
+               <Route path="/frontend/setting" element={<Setting />} />
+               <Route path="/frontend/menu" element={<Menu />} />
+
+
               {/* Patient routes */}
               <Route path="/patient/create" element={<CreatePatient />} />
               <Route path="/patient/view" element={<PatientList />} />

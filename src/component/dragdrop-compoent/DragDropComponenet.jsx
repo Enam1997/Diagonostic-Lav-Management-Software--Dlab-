@@ -2,7 +2,7 @@ import { InputLabel } from "@mui/material";
 import React from "react";
 import { useDropzone } from "react-dropzone";
 
-const DragDropComponenet = () => {
+const DragDropComponenet = ({title}) => {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
   const files = acceptedFiles.map((file) => (
@@ -13,7 +13,7 @@ const DragDropComponenet = () => {
 
   return (
     <section className="container">
-        <InputLabel>Profile Picture</InputLabel>
+        <InputLabel>{title}</InputLabel>
       <div
         {...getRootProps({ className: "dropzone" })}
         style={{  border: "1px solid black", display:"flex" , alignItems:"center", flexDirection:"column", padding:"40px" }}

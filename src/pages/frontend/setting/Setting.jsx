@@ -8,9 +8,6 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
-import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
-
-import "./createpatient.css";
 import {
   BadgePlus,
   Calendar,
@@ -41,8 +38,8 @@ function basicDetails() {
         <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Name"
-            placeholder="Enter Your Name"
+            label="Application Name"
+            placeholder="Enter Application Name"
             variant="outlined"
             fullWidth
             InputProps={{
@@ -59,32 +56,7 @@ function basicDetails() {
         <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Gender"
-            select
-            variant="outlined"
-            fullWidth
-            value={""}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <ShieldAlert />
-                </InputAdornment>
-              ),
-            }}
-            SelectProps={{
-              displayEmpty: true, // To show an empty option initially
-            }}
-          >
-            <MenuItem value="">Select</MenuItem>
-            <MenuItem value="option1">Male</MenuItem>
-            <MenuItem value="option2">Female</MenuItem>
-            <MenuItem value="option3">Other</MenuItem>
-          </TextField>
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <TextField
-            id="outlined-basic"
-            label="Birthday"
+            label="Receive Email To"
             variant="outlined"
             fullWidth
             InputProps={{
@@ -96,10 +68,10 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={4}>
+        <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Age"
+            label="Working Hours"
             variant="outlined"
             fullWidth
             InputProps={{
@@ -111,48 +83,10 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <TextField
-            id="outlined-basic"
-            label="Maritual Status"
-            variant="outlined"
-            select
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <BadgePlus />
-                </InputAdornment>
-              ),
-            }}
-          >
-            <MenuItem value="" disabled>
-              Select
-            </MenuItem>
-            <MenuItem value="option1">Male</MenuItem>
-            <MenuItem value="option2">Female</MenuItem>
-            <MenuItem value="option3">Other</MenuItem>
-          </TextField>
-        </Grid>
         <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Mobile no"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Phone />
-                </InputAdornment>
-              ),
-            }}
-          />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <TextField
-            id="outlined-basic"
-            label="Email"
+            label="Address "
             variant="outlined"
             fullWidth
             InputProps={{
@@ -164,10 +98,10 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={4}>
+        <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Category"
+            label="Mobile No "
             variant="outlined"
             fullWidth
             InputProps={{
@@ -179,10 +113,10 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={2}>
+        <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Blood Group"
+            label="Email "
             variant="outlined"
             fullWidth
             InputProps={{
@@ -194,10 +128,10 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={2}>
+        <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Blood Pressure"
+            label="Fax "
             variant="outlined"
             fullWidth
             InputProps={{
@@ -209,10 +143,10 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={2}>
+        <Grid item sm={12} md={6}>
           <TextField
             id="outlined-basic"
-            label="Height"
+            label="Footer Text"
             variant="outlined"
             fullWidth
             InputProps={{
@@ -224,111 +158,26 @@ function basicDetails() {
             }}
           />
         </Grid>
-        <Grid item sm={12} md={6} lg={2}>
-          <TextField
-            id="outlined-basic"
-            label="Weight"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Weight />
-                </InputAdornment>
-              ),
-            }}
-          />
+        <Grid item sm={12}>
+          <DragDropComponenet title={"Logo"} />
         </Grid>
         <Grid item sm={12}>
-          <TextField
-            id="outlined-basic"
-            label="Adress"
-            variant="outlined"
-            placeholder="Adress"
-            fullWidth
-          />
-        </Grid>
-        <Grid item sm={12}>
-          <DragDropComponenet title={"Profile Picture"} />
+          <DragDropComponenet title={"Fav Icon"} />
         </Grid>
       </Grid>
     </Box>
   );
 }
 
-function emergencyContact() {
+function socialLinks() {
   return (
     <Box className="card1 basic-deatils-form section-top-margin">
-      <p className="title1">Emergency Contact</p>
+      <p className="title1">Social Links</p>
       <Grid container className="" columnSpacing={3} rowSpacing={4}>
         <Grid item sm={12} md={6} lg={4}>
           <TextField
             id="outlined-basic"
-            label="Gurdian"
-            placeholder="Enter Gurdian Name"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Send />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <TextField
-            id="outlined-basic"
-            label="Relationship"
-            placeholder="Relationship with Gurdian"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <RefreshCcwDot />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <TextField
-            id="outlined-basic"
-            label="Mobile No"
-            placeholder="Gurdian Phone"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Phone />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-      </Grid>
-    </Box>
-  );
-}
-
-function loginDetails() {
-  return (
-    <Box className="card1 basic-deatils-form section-top-margin">
-      <p className="title1">Login Details</p>
-      <Grid container className="" columnSpacing={3} rowSpacing={4}>
-        <Grid item sm={12} md={6} lg={4}>
-          <TextField
-            id="outlined-basic"
-            label="Username"
+            label="Facebook Url"
             placeholder="Enter Your Name"
             variant="outlined"
             fullWidth
@@ -346,7 +195,7 @@ function loginDetails() {
         <Grid item sm={12} md={6} lg={4}>
           <TextField
             id="outlined-basic"
-            label="Password"
+            label="Twitter Url"
             placeholder="Enter Your Name"
             variant="outlined"
             fullWidth
@@ -364,7 +213,79 @@ function loginDetails() {
         <Grid item sm={12} md={6} lg={4}>
           <TextField
             id="outlined-basic"
-            label="Retype Password"
+            label="Youtube Url"
+            placeholder="Enter Your Name"
+            variant="outlined"
+            fullWidth
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <UnlockKeyhole />
+                </InputAdornment>
+              ),
+            }}
+            className="custom-textfield"
+            autoFocus
+          />
+        </Grid>
+        <Grid item sm={12} md={6} lg={4}>
+          <TextField
+            id="outlined-basic"
+            label="Google Plus"
+            placeholder="Enter Your Name"
+            variant="outlined"
+            fullWidth
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <UnlockKeyhole />
+                </InputAdornment>
+              ),
+            }}
+            className="custom-textfield"
+            autoFocus
+          />
+        </Grid>
+        <Grid item sm={12} md={6} lg={4}>
+          <TextField
+            id="outlined-basic"
+            label="Linkedin Url"
+            placeholder="Enter Your Name"
+            variant="outlined"
+            fullWidth
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <UnlockKeyhole />
+                </InputAdornment>
+              ),
+            }}
+            className="custom-textfield"
+            autoFocus
+          />
+        </Grid>
+        <Grid item sm={12} md={6} lg={4}>
+          <TextField
+            id="outlined-basic"
+            label="Pinterest Url"
+            placeholder="Enter Your Name"
+            variant="outlined"
+            fullWidth
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <UnlockKeyhole />
+                </InputAdornment>
+              ),
+            }}
+            className="custom-textfield"
+            autoFocus
+          />
+        </Grid>
+        <Grid item sm={12} md={6} lg={4}>
+          <TextField
+            id="outlined-basic"
+            label="Instagram Url"
             placeholder="Enter Your Name"
             variant="outlined"
             fullWidth
@@ -384,15 +305,15 @@ function loginDetails() {
   );
 }
 
-const CreatePatient = () => {
+const Setting = () => {
   const [loading, setLoading] = useState(true);
 
   return (
     <Box className="page-container">
-      <PagenameContainer>Create Patient</PagenameContainer>
+      <PagenameContainer>Settings</PagenameContainer>
 
       <Box className="page-main-content">
-        {basicDetails()} {emergencyContact()} {loginDetails()}{" "}
+        {basicDetails()} {socialLinks()}
         <Stack className="section-top-margin" alignItems="end">
           {
             <LoadingButtonComponent
@@ -407,4 +328,4 @@ const CreatePatient = () => {
   );
 };
 
-export default CreatePatient;
+export default Setting;

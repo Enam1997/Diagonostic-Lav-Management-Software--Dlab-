@@ -27,39 +27,39 @@ export const sidebarMenus = [
     childrens: [
       {
         title: "Setting",
-        path: "/",
+        path: "/frontend/setting",
       },
       {
         title: "Menu",
-        path: "/about",
+        path: "/frontend/menu",
       },
       {
         title: "Page Section",
-        path: "/about",
+        path: "/frontend/page-section",
       },
       {
         title: "Manage Page",
-        path: "/about",
+        path: "/frontend/manage-page",
       },
       {
         title: "Slider",
-        path: "/about",
+        path: "/frontend/slider",
       },
       {
         title: "Features",
-        path: "/about",
+        path: "/frontend/features",
       },
       {
         title: "Testimonial",
-        path: "/about",
+        path: "/frontend/testimonial",
       },
       {
         title: "Service",
-        path: "/about",
+        path: "/frontend/service",
       },
       {
         title: "Faq",
-        path: "/about",
+        path: "/frontend/faq",
       },
     ],
   },
