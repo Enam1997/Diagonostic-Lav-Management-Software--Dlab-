@@ -31,6 +31,8 @@ import LoginDeactiveEmployee from "./pages/employee/login-deactive/LoginDeactive
 import SetReferral from "./pages/refer-manager/set-referral/SetReferral";
 import Setting from "./pages/frontend/setting/Setting";
 import Menu from "./pages/frontend/menu/Menu";
+import Features from "./pages/frontend/features/Features";
+import Testimonail from "./pages/frontend/testimonials/Testimonail";
 
 function App() {
   return (
@@ -43,10 +45,11 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
 
-               {/* Frontend */}
-               <Route path="/frontend/setting" element={<Setting />} />
-               <Route path="/frontend/menu" element={<Menu />} />
-
+              {/* Frontend */}
+              <Route path="/frontend/setting" element={<Setting />} />
+              <Route path="/frontend/menu" element={<Menu />} />
+              <Route path="/frontend/features" element={<Features />} />
+              <Route path="/frontend/testimonial" element={<Testimonail/>} />
 
               {/* Patient routes */}
               <Route path="/patient/create" element={<CreatePatient />} />
