@@ -1,6 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import ScrolabelContainer from "./layout/scrollabel-container/ScrolabelContainer";
 import Sidebar from "./layout/sidebar/Sidebar";
 import Topbar from "./layout/topbar/Topbar";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -24,7 +23,6 @@ import AppoinmentList from "./pages/appoinment/appoinment-list/AppoinmentList";
 import CreateAppoinment from "./pages/appoinment/create-appoinment/CreateAppoinment";
 import RequestedList from "./pages/appoinment/requested-list/RequestedList";
 import EmployeeList from "./pages/employee/employee-list/EmployeeList";
-import Department from "./pages/employee/add-department/Department";
 import Designation from "./pages/employee/add-designation/Designation";
 import AddEmployee from "./pages/employee/add-employee/AddEmployee";
 import LoginDeactiveEmployee from "./pages/employee/login-deactive/LoginDeactiveEmployee";
@@ -33,6 +31,10 @@ import Setting from "./pages/frontend/setting/Setting";
 import Menu from "./pages/frontend/menu/Menu";
 import Features from "./pages/frontend/features/Features";
 import Testimonail from "./pages/frontend/testimonials/Testimonail";
+import Service from "./pages/frontend/service/Service";
+import Faq from "./pages/frontend/faq/Faq";
+import Slider from "./pages/frontend/slider/Slider";
+import PageSection from "./pages/frontend/page-section/PageSection";
 
 function App() {
   return (
@@ -49,7 +51,14 @@ function App() {
               <Route path="/frontend/setting" element={<Setting />} />
               <Route path="/frontend/menu" element={<Menu />} />
               <Route path="/frontend/features" element={<Features />} />
-              <Route path="/frontend/testimonial" element={<Testimonail/>} />
+              <Route path="/frontend/testimonial" element={<Testimonail />} />
+              <Route path="/frontend/service" element={<Service />} />
+              <Route path="/frontend/faq" element={<Faq />} />
+              <Route path="/frontend/slider" element={<Slider />} />
+              <Route path="/frontend/page-section" element={<PageSection />} />
+              {/*
+              <Route path="/frontend/manage-page" element={<Testimonail/>} />
+              */}
 
               {/* Patient routes */}
               <Route path="/patient/create" element={<CreatePatient />} />
