@@ -5,6 +5,12 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import { ClipboardType, Contact, Home, ShieldQuestion } from "lucide-react";
+import HomePage from "./home-page/HomePage";
+import AppoinmentPage from "./appoinment-page/AppoinmentPage";
+import DocotrsPage from "./doctors-page/DocotrsPage";
+import AboutUsPage from "./aboutus-page/AboutUsPage";
+import FaqPage from "./faq-page/FaqPage";
+import ContactUsPage from "./contactus-page/ContactUsPage";
 
 const PageSection = () => {
   const [value, setValue] = React.useState("1");
@@ -58,16 +64,23 @@ const PageSection = () => {
             <Grid item sm={12} md={8} lg={10}>
               <Box className="card1">
                 <TabPanel value="1">
-                  <Stack direction="row" justifyContent="end">
-                    <OutlinedInput size="small" placeholder="Search patient" />
-                  </Stack>
-                  Panel 1
+                  <HomePage />
                 </TabPanel>
-                <TabPanel value="2">Panel 2</TabPanel>
-                <TabPanel value="3">Panel 3</TabPanel>
-                <TabPanel value="4">Panel 4</TabPanel>
-                <TabPanel value="5">Panel 5</TabPanel>
-                <TabPanel value="6">Panel 6</TabPanel>
+                <TabPanel value="2">
+                  <AppoinmentPage />
+                </TabPanel>
+                <TabPanel value="3">
+                  <DocotrsPage />
+                </TabPanel>
+                <TabPanel value="4">
+                  <AboutUsPage />
+                </TabPanel>
+                <TabPanel value="5">
+                  <FaqPage />
+                </TabPanel>
+                <TabPanel value="6">
+                  <ContactUsPage />
+                </TabPanel>
               </Box>
             </Grid>
           </Grid>
