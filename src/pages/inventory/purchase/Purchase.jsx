@@ -13,34 +13,7 @@ import Tooltip1 from "../../../component/tooltip/Tooltip1";
 import { FileText, Printer, Sheet } from "lucide-react";
 import AddPurchase from "./AddPurchase";
 import PurchaseList from "./PurchaseList";
-
-const buttons = [
-  <Tooltip1 key={1} title={"Hello"}>
-    <IconButton>
-      <Sheet />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={2}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={3}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={4}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={5}>
-    <IconButton>
-      <Printer />
-    </IconButton>
-  </Tooltip1>,
-];
+import TableDataListPrintButtons from "../../../component/tableDataListPrintButtons/TableDataListPrintButtons";
 
 const Purchase = () => {
   const [value, setValue] = React.useState("1");
@@ -75,9 +48,7 @@ const Purchase = () => {
               </Box>
               <TabPanel value="1">
                 <Stack direction="row" justifyContent="space-between">
-                  <ButtonGroup size="small" aria-label="small button group">
-                    {buttons}
-                  </ButtonGroup>
+                  <TableDataListPrintButtons />
                   <OutlinedInput size="small" placeholder="Search patient" />
                 </Stack>
                 <PurchaseList />

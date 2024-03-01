@@ -2,11 +2,10 @@ import { Box, OutlinedInput, Stack, Tab } from "@mui/material";
 import React from "react";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import TestList from "./TestList";
-import CreateTest from "./CreateTest";
-import TableDataListPrintButtons from "../../../component/tableDataListPrintButtons/TableDataListPrintButtons";
+import PageList from "./PageList";
+import AddPage from "./AddPage";
 
-const LabTest = () => {
+const ManagePage = () => {
   const [value, setValue] = React.useState("1");
 
   const handleTabChange = (event, newValue) => {
@@ -15,7 +14,7 @@ const LabTest = () => {
 
   return (
     <Box className="page-container">
-      <PagenameContainer>Lab Test</PagenameContainer>
+      <PagenameContainer>Testimonails</PagenameContainer>
       <Box
         className="page-main-content"
         sx={{
@@ -33,19 +32,19 @@ const LabTest = () => {
                   onChange={handleTabChange}
                   aria-label="lab API tabs example"
                 >
-                  <Tab label="Test List" value="1" />
-                  <Tab label="Create Test" value="2" />
+                  <Tab label="Page List" value="1" />
+                  <Tab label="Add Page" value="2" />
                 </TabList>
               </Box>
               <TabPanel value="1">
-                <Stack direction="row" justifyContent="space-between">
-                  <TableDataListPrintButtons />
+                <Stack direction="row" justifyContent="end">
                   <OutlinedInput size="small" placeholder="Search patient" />
                 </Stack>
-                <TestList />
+
+                <PageList />
               </TabPanel>
               <TabPanel value="2">
-                <CreateTest />
+                <AddPage />
               </TabPanel>
             </TabContext>
           </Box>
@@ -55,4 +54,4 @@ const LabTest = () => {
   );
 };
 
-export default LabTest;
+export default ManagePage;

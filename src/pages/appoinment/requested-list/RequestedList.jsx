@@ -16,34 +16,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import RequestListTable from "./RequestListTable";
 import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
-
-const buttons = [
-  <Tooltip1 key={1} title={"Hello"}>
-    <IconButton>
-      <Sheet />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={2}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={3}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={4}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={5}>
-    <IconButton>
-      <Printer />
-    </IconButton>
-  </Tooltip1>,
-];
+import TableDataListPrintButtons from "../../../component/tableDataListPrintButtons/TableDataListPrintButtons";
 
 const RequestedList = () => {
   const [value, setValue] = React.useState("1");
@@ -77,9 +50,7 @@ const RequestedList = () => {
           <Box className="card1">
             <Box sx={{ width: "100%", typography: "body1" }}>
               <Stack direction="row" justifyContent="space-between">
-                <ButtonGroup size="small" aria-label="small button group">
-                  {buttons}
-                </ButtonGroup>
+                <TableDataListPrintButtons />
                 <OutlinedInput size="small" placeholder="Search patient" />
               </Stack>
               <RequestListTable />

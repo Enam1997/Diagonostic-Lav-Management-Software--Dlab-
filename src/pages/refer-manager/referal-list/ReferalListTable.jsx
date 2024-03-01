@@ -17,41 +17,12 @@ import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import { FileText, Printer, Sheet } from "lucide-react";
 
 import { visuallyHidden } from "@mui/utils";
-import { Edit, Filter, Trash } from "lucide-react";
+import { Filter, Trash } from "lucide-react";
 import Tooltip1 from "../../../component/tooltip/Tooltip1";
-import { Avatar, ButtonGroup, OutlinedInput, Stack } from "@mui/material";
-import TableDataListPrintButtons from "../../../component/tableDataListPrintButtons/TableDataListPrintButtons";
-
-const buttons = [
-  <Tooltip1 key={1} title={"Hello"}>
-    <IconButton>
-      <Sheet />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={2}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={3}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={4}>
-    <IconButton>
-      <FileText />
-    </IconButton>
-  </Tooltip1>,
-  <Tooltip1 title={"Hello"} key={5}>
-    <IconButton>
-      <Printer />
-    </IconButton>
-  </Tooltip1>,
-];
+import { Avatar } from "@mui/material";
+import { rows } from "../../../const-data/patient/patientList";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -83,19 +54,6 @@ function stableSort(array, comparator) {
 
 const headCells = [
   {
-    id: "sl",
-    numeric: false,
-    disablePadding: true,
-    label: "SL",
-  },
-  {
-    id: "photo",
-    numeric: false,
-    disablePadding: true,
-    label: "Photo",
-  },
-
-  {
     id: "name",
     numeric: false,
     disablePadding: true,
@@ -103,23 +61,42 @@ const headCells = [
   },
 
   {
-    id: "staffId",
+    id: "patientId",
     numeric: false,
     disablePadding: true,
-    label: "	Staff Id",
+    label: "PatientId",
   },
 
   {
-    id: "designation",
+    id: "image",
     numeric: false,
     disablePadding: true,
-    label: "Designation",
+    label: "Image",
+  },
+
+  {
+    id: "catergory",
+    numeric: false,
+    disablePadding: true,
+    label: "Catergory",
   },
   {
-    id: "department",
+    id: "gender",
     numeric: false,
     disablePadding: false,
-    label: "Department",
+    label: "Gender",
+  },
+  {
+    id: "gurdian",
+    numeric: false,
+    disablePadding: false,
+    label: "Gurdian",
+  },
+  {
+    id: "bloodGroup",
+    numeric: false,
+    disablePadding: false,
+    label: "Blood Group",
   },
   {
     id: "email",
@@ -128,7 +105,7 @@ const headCells = [
     label: "Email",
   },
   {
-    id: "mobileNo",
+    id: "mobile",
     numeric: false,
     disablePadding: false,
     label: "Mobile No",
@@ -215,22 +192,38 @@ function EnhancedTableToolbar(props) {
         }),
       }}
     >
-      {numSelected > 0 && (
-        <>
-          <Typography
-            sx={{ flex: "1 1 100%" }}
-            color="inherit"
-            variant="subtitle1"
-            component="div"
-          >
-            {numSelected} selected
-          </Typography>
-          <Tooltip1 title="Delete">
-            <IconButton>
-              <Trash />
-            </IconButton>
-          </Tooltip1>
-        </>
+      {numSelected > 0 ? (
+        <Typography
+          sx={{ flex: "1 1 100%" }}
+          color="inherit"
+          variant="subtitle1"
+          component="div"
+        >
+          {numSelected} selected
+        </Typography>
+      ) : (
+        <Typography
+          sx={{ flex: "1 1 100%" }}
+          variant="h6"
+          id="tableTitle"
+          component="div"
+        >
+          Patient
+        </Typography>
+      )}
+
+      {numSelected > 0 ? (
+        <Tooltip1 title="Delete">
+          <IconButton>
+            <Trash />
+          </IconButton>
+        </Tooltip1>
+      ) : (
+        <Tooltip1 title="Filter list">
+          <IconButton>
+            <Filter />
+          </IconButton>
+        </Tooltip1>
       )}
     </Toolbar>
   );
@@ -240,7 +233,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function EmployeeListTable({ rows }) {
+export default function ReferalListTable() {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
@@ -311,106 +304,96 @@ export default function EmployeeListTable({ rows }) {
   );
 
   return (
-    <>
-      <Stack direction="row" justifyContent="space-between">
-        <TableDataListPrintButtons />
-        <OutlinedInput size="small" placeholder="Search patient" />
-      </Stack>
-      <Box sx={{ width: "100%" }}>
-        <Paper sx={{ width: "100%", mb: 2, overflow: "hidden" }}>
-          <EnhancedTableToolbar numSelected={selected.length} />
-          <TableContainer sx={{ maxHeight: 440 }}>
-            <Table
-              sx={{ minWidth: 750 }}
-              aria-labelledby="tableTitle"
-              size={dense ? "small" : "medium"}
-              stickyHeader
-            >
-              <EnhancedTableHead
-                numSelected={selected.length}
-                order={order}
-                orderBy={orderBy}
-                onSelectAllClick={handleSelectAllClick}
-                onRequestSort={handleRequestSort}
-                rowCount={rows.length}
-              />
-              <TableBody>
-                {visibleRows.map((row, index) => {
-                  const isItemSelected = isSelected(row.id);
-                  const labelId = `enhanced-table-checkbox-${index}`;
-                  return (
-                    <TableRow
-                      hover
-                      onClick={(event) => handleClick(event, row.id)}
-                      role="checkbox"
-                      aria-checked={isItemSelected}
-                      tabIndex={-1}
-                      key={row.id}
-                      selected={isItemSelected}
-                      sx={{ cursor: "pointer" }}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          color="primary"
-                          checked={isItemSelected}
-                          inputProps={{
-                            "aria-labelledby": labelId,
-                          }}
-                        />
-                      </TableCell>
-                      <TableCell
-                        component="th"
-                        id={labelId}
-                        scope="row"
-                        align="inherit"
-                      >
-                        {index + 1}
-                      </TableCell>
-                      <TableCell align="center">
-                        <Avatar alt="Remy Sharp" src={row.image} />
-                      </TableCell>
-                      <TableCell align="center">{row.name}</TableCell>
-                      <TableCell align="center">{row.id}</TableCell>
-
-                      <TableCell align="center">{row.designation}</TableCell>
-                      <TableCell align="center">{row.department}</TableCell>
-                      <TableCell align="center">{row.email}</TableCell>
-                      <TableCell align="center">{row.mobileNo}</TableCell>
-                      <TableCell align="center">
-                        <IconButton>
-                          <Edit />
-                        </IconButton>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-                {emptyRows > 0 && (
+    <Box sx={{ width: "100%" }}>
+      <Paper sx={{ width: "100%", mb: 2, overflow: "hidden" }}>
+        <EnhancedTableToolbar numSelected={selected.length} />
+        <TableContainer sx={{ maxHeight: 440 }}>
+          <Table
+            sx={{ minWidth: 750 }}
+            aria-labelledby="tableTitle"
+            size={dense ? "small" : "medium"}
+          >
+            <EnhancedTableHead
+              numSelected={selected.length}
+              order={order}
+              orderBy={orderBy}
+              onSelectAllClick={handleSelectAllClick}
+              onRequestSort={handleRequestSort}
+              rowCount={rows.length}
+            />
+            <TableBody>
+              {visibleRows.map((row, index) => {
+                const isItemSelected = isSelected(row.id);
+                const labelId = `enhanced-table-checkbox-${index}`;
+                return (
                   <TableRow
-                    style={{
-                      height: (dense ? 33 : 53) * emptyRows,
-                    }}
+                    hover
+                    onClick={(event) => handleClick(event, row.id)}
+                    role="checkbox"
+                    aria-checked={isItemSelected}
+                    tabIndex={-1}
+                    key={row.id}
+                    selected={isItemSelected}
+                    sx={{ cursor: "pointer" }}
                   >
-                    <TableCell colSpan={6} />
+                    <TableCell padding="checkbox">
+                      <Checkbox
+                        color="primary"
+                        checked={isItemSelected}
+                        inputProps={{
+                          "aria-labelledby": labelId,
+                        }}
+                      />
+                    </TableCell>
+                    <TableCell
+                      component="th"
+                      id={labelId}
+                      scope="row"
+                      padding="none"
+                      align="inherit"
+                    >
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="center">{row.id}</TableCell>
+
+                    <TableCell align="center">
+                      <Avatar alt="Remy Sharp" src={row.image} />
+                    </TableCell>
+                    <TableCell align="center">{row.category}</TableCell>
+                    <TableCell align="center">{row.gender}</TableCell>
+                    <TableCell align="center">{row.gurdian}</TableCell>
+                    <TableCell align="center">{row.bloodGroup}</TableCell>
+                    <TableCell align="center">{row.email}</TableCell>
+                    <TableCell align="center">{row.mobileNo}</TableCell>
                   </TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={rows.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        </Paper>
-        <FormControlLabel
-          control={<Switch checked={dense} onChange={handleChangeDense} />}
-          label="Dense padding"
+                );
+              })}
+              {emptyRows > 0 && (
+                <TableRow
+                  style={{
+                    height: (dense ? 33 : 53) * emptyRows,
+                  }}
+                >
+                  <TableCell colSpan={6} />
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={rows.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
         />
-      </Box>
-    </>
+      </Paper>
+      <FormControlLabel
+        control={<Switch checked={dense} onChange={handleChangeDense} />}
+        label="Dense padding"
+      />
+    </Box>
   );
 }

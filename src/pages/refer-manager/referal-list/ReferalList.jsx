@@ -1,15 +1,21 @@
-import { Box, OutlinedInput, Stack } from "@mui/material";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  IconButton,
+  OutlinedInput,
+  Stack,
+} from "@mui/material";
 import React from "react";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
 import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
-
-import PatiensTable from "./PatiensTable";
+import ReferalListTable from "./ReferalListTable";
 import TableDataListPrintButtons from "../../../component/tableDataListPrintButtons/TableDataListPrintButtons";
 
-const PatientList = () => {
+const ReferalList = () => {
   return (
     <Box className="page-container">
-      <PagenameContainer>Patient List</PagenameContainer>
+      <PagenameContainer>Referral List</PagenameContainer>
       <ScrolabelContainer>
         <Box
           className="page-main-content"
@@ -26,7 +32,7 @@ const PatientList = () => {
               <OutlinedInput size="small" placeholder="Search patient" />
             </Stack>
             <Box mt={4}>
-              <PatiensTable />
+              <ReferalListTable />
             </Box>
           </Box>
         </Box>
@@ -35,4 +41,4 @@ const PatientList = () => {
   );
 };
 
-export default PatientList;
+export default ReferalList;

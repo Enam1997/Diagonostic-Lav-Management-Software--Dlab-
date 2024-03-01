@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 import { Box, Grid, InputLabel, OutlinedInput, Stack } from "@mui/material";
 import PagenameContainer from "../../../layout/pagename-container/PagenameContainer";
 import ScrolabelContainer from "../../../layout/scrollabel-container/ScrolabelContainer";
 import LoadingButtonComponent from "../../../component/buttons/loading-button/LoadingButtonComponent";
 import { ChevronRightSquare } from "lucide-react";
-import DeparatmentList from './DeparatmentList';
+import DeparatmentList from "./DeparatmentList";
 
 function addDepartment() {
   return (
@@ -17,10 +17,7 @@ function addDepartment() {
           <OutlinedInput size="small" fullWidth />
         </Stack>
         <Stack alignItems={"end"}>
-          <LoadingButtonComponent
-            text={"Add"}
-            icon={<ChevronRightSquare />}
-          />
+          <LoadingButtonComponent text={"Add"} icon={<ChevronRightSquare />} />
         </Stack>
       </Stack>
     </Box>
@@ -46,7 +43,7 @@ const Department = () => {
                 {addDepartment()}
               </Grid>
               <Grid xs={6} item>
-                <DeparatmentList/>
+                <DeparatmentList />
               </Grid>
             </Grid>
           </Box>

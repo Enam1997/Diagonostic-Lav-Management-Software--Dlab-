@@ -35,6 +35,9 @@ import Service from "./pages/frontend/service/Service";
 import Faq from "./pages/frontend/faq/Faq";
 import Slider from "./pages/frontend/slider/Slider";
 import PageSection from "./pages/frontend/page-section/PageSection";
+import ManagePage from "./pages/frontend/manage-page/ManagePage";
+import Department from "./pages/employee/add-department/Department";
+import ReferalList from "./pages/refer-manager/referal-list/ReferalList";
 
 function App() {
   return (
@@ -56,9 +59,7 @@ function App() {
               <Route path="/frontend/faq" element={<Faq />} />
               <Route path="/frontend/slider" element={<Slider />} />
               <Route path="/frontend/page-section" element={<PageSection />} />
-              {/*
-              <Route path="/frontend/manage-page" element={<Testimonail/>} />
-              */}
+              <Route path="/frontend/manage-page" element={<ManagePage />} />
 
               {/* Patient routes */}
               <Route path="/patient/create" element={<CreatePatient />} />
@@ -104,12 +105,14 @@ function App() {
                 path="/add-employee-designation"
                 element={<Designation />}
               />
+              <Route path="/add-employee-department" element={<Department />} />
               <Route
                 path="/employee-login-deactivated-list"
                 element={<LoginDeactiveEmployee />}
               />
               {/* Refer Manager */}
               <Route path="/refer/set-referal" element={<SetReferral />} />
+              <Route path="/refer/referral-list" element={<ReferalList />} />
             </Routes>
           </div>
         </div>

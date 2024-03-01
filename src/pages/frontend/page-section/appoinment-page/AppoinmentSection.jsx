@@ -15,105 +15,10 @@ const AppoinmentSection = () => {
   return (
     <Box mt={2} className="create-test-form">
       <Grid container className="" columnSpacing={3} rowSpacing={4}>
-        <Grid item sm={12} md={6}>
+        <Grid item sm={12}>
           <TextField
             id="outlined-basic"
             label="Title"
-            placeholder="Enter Test Name"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <UserRound />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <TextField
-            id="outlined-basic"
-            label="Positopn"
-            variant="outlined"
-            select
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <BadgePlus />
-                </InputAdornment>
-              ),
-            }}
-          >
-            <MenuItem value="" disabled>
-              Select
-            </MenuItem>
-            <MenuItem value="option1">Left</MenuItem>
-            <MenuItem value="option2">Center</MenuItem>
-            <MenuItem value="option3">Right</MenuItem>
-          </TextField>
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <TextField
-            id="outlined-basic"
-            label="Button Text 1"
-            placeholder="Enter Test Name"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <UserRound />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <TextField
-            id="outlined-basic"
-            label="Button Url 1"
-            placeholder="Enter Test Name"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <UserRound />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <TextField
-            id="outlined-basic"
-            label="Button Text 2"
-            placeholder="Enter Test Name"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <UserRound />
-                </InputAdornment>
-              ),
-            }}
-            className="custom-textfield"
-            autoFocus
-          />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <TextField
-            id="outlined-basic"
-            label="Button Url 2"
             placeholder="Enter Test Name"
             variant="outlined"
             fullWidth
@@ -145,9 +50,6 @@ const AppoinmentSection = () => {
             className="custom-textfield"
             autoFocus
           />
-        </Grid>
-        <Grid item sm={12}>
-          <DragDropComponenet title={"Photo"} />
         </Grid>
       </Grid>
       <Stack className="section-top-margin" alignItems="end">
