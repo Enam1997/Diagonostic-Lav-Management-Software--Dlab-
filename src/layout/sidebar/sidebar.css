@@ -4,6 +4,7 @@
   background-color: var(--theme-color-2);
   display: flex;
   flex-direction: column;
+
   /* border-radius: 0px 30px 30px 0px; */
 }
 
@@ -93,7 +94,7 @@
   color: var(--theme-color-1);
 }
 
-.activenav{
+.activenav {
   color: red !important;
 }
 
@@ -114,4 +115,18 @@
 .sidebar:hover .menu-container::-webkit-scrollbar-thumb {
   background-color: #4343ee;
   border-radius: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  .sidebar {
+    position: absolute;
+    height: 100% !important;
+    z-index: 10;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .sidebar {
+    width: 100% !important;
+  }
 }

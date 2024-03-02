@@ -38,6 +38,7 @@ import PageSection from "./pages/frontend/page-section/PageSection";
 import ManagePage from "./pages/frontend/manage-page/ManagePage";
 import Department from "./pages/employee/add-department/Department";
 import ReferalList from "./pages/refer-manager/referal-list/ReferalList";
+import Withdrawal from "./pages/refer-manager/withdrawal/Withdrawal";
 
 function App() {
   return (
@@ -113,6 +114,7 @@ function App() {
               {/* Refer Manager */}
               <Route path="/refer/set-referal" element={<SetReferral />} />
               <Route path="/refer/referral-list" element={<ReferalList />} />
+              <Route path="/refer/withdrawal" element={<Withdrawal />} />
             </Routes>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.css";
 import SidebarItem from "./SidebarItem";
 import sidebarItemsData from "../../const-data/sidebar/sidebar.json";
@@ -6,8 +6,13 @@ import logo from "../../assets/logo.png";
 import { sidebarMenus } from "../../const-data/sidebar/sidebar";
 
 const Sidebar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
-    <div className="sidebar">
+    <div
+      className="sidebar"
+      style={{ width: `${sidebarOpen ? "260px" : "0px"}` }}
+    >
       <div className="logo-container">
         <img src={logo} className="logo" alt="" />
         {/* <button
